@@ -15,3 +15,10 @@ TextField {
 Image {
     margin: 10;
 }
+ActivityIndicator{
+    width: 30%;
+    height: 30vw;
+}
+ActionItem {
+    color: #fff;
+}

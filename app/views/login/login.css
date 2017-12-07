@@ -1,4 +1,7 @@
 TextField {
     width: 100%;
-    height: 120px;
+    height: 120;
+}
+Image {
+    margin-top: 20px;
 }

@@ -1,4 +1,7 @@
 <Page loaded="loaded">
+    <Page.actionBar>
+        <ActionBar title="Sign in"></ActionBar>
+    </Page.actionBar>
     <StackLayout orientation="vertical">
         <Image src="res://logo" stretch="none" horizontalAlignment="center" />
         <TextField hint="Email Address" text="{{ email }}" keyboardType="email" autocorrect="false" autocapitalizationType="none" id="email"/>

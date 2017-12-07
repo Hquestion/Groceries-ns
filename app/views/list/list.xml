@@ -1,10 +1,21 @@
 <Page loaded="loaded">
+    <Page.actionBar>
+        <ActionBar title="Groceries">
+            <ActionBar.actionItems>
+                <ActionItem text="分享" tap="share" ios.position="right" />
+            </ActionBar.actionItems>
+        </ActionBar>
+    </Page.actionBar>
     <GridLayout rows="auto, *" columns="2*, *">
         <TextField id="grocery" text="{{ grocery }}" hint="Enter a grocery item" row="0" col="0" />
         <Button text="Add" tap="add" row="0" col="1" />
         <ListView items="{{ groceryList }}" row="1" colSpan="2" id="groceryList">
             <ListView.itemTemplate>
-                <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center"/>
+                <GridLayout columns="3*, auto">
+                    <Label text="{{ name }}"/>
+                    <TextField text="{{ $parents['ListView'].grocery }}" col="1"/>
+                    <Image src="res://ic_menu_delete" ios:visibility="collapsed" col="2" tap="delete" />
+                </GridLayout>
             </ListView.itemTemplate>
         </ListView>
         <ActivityIndicator busy="{{ isLoading }}" rowSpan="2" colSpan="2" />

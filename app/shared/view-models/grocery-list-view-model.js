@@ -48,6 +48,10 @@ function GroceryListViewModel(items) {
         });
     };
 
+    viewModel.delete = function(index){
+        viewModel.splice(index, 1);
+    };
+
 
     return viewModel;
 }
